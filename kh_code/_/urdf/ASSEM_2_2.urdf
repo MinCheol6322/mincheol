@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ASSEM_2_2">
+  <link
+    name="REAR_BODY">
+    <inertial>
+      <origin
+        xyz="0.080916 -1.8203E-05 0.027239"
+        rpy="0 0 0" />
+      <mass
+        value="4.8069" />
+      <inertia
+        ixx="0.015462"
+        ixy="-7.0621E-06"
+        ixz="-0.00021339"
+        iyy="0.037803"
+        iyz="-2.4136E-06"
+        izz="0.03743" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/REAR_BODY.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/REAR_BODY.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="WAIST_YAW">
+    <inertial>
+      <origin
+        xyz="6.3838E-16 1.6653E-16 0.01696"
+        rpy="0 0 0" />
+      <mass
+        value="0.96933" />
+      <inertia
+        ixx="0.002572"
+        ixy="-1.5585E-18"
+        ixz="-2.5994E-17"
+        iyy="0.0017614"
+        iyz="-6.2884E-18"
+        izz="0.0016095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/WAIST_YAW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/WAIST_YAW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="WAIST_YAW_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.3 0 -0.0035"
+      rpy="0 0 0" />
+    <parent
+      link="REAR_BODY" />
+    <child
+      link="WAIST_YAW" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="FRONT_BODY">
+    <inertial>
+      <origin
+        xyz="0.21928 -0.0014871 0.0067256"
+        rpy="0 0 0" />
+      <mass
+        value="6.419" />
+      <inertia
+        ixx="0.02823"
+        ixy="-3.2963E-05"
+        ixz="0.00056733"
+        iyy="0.053377"
+        iyz="-1.8366E-05"
+        izz="0.046454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FRONT_BODY.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FRONT_BODY.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRONT_BODY_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="WAIST_YAW" />
+    <child
+      link="FRONT_BODY" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="FL_HIP">
+    <inertial>
+      <origin
+        xyz="1.8041E-16 0.0063388 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.43122" />
+      <inertia
+        ixx="0.00054506"
+        ixy="-4.7315E-18"
+        ixz="-9.9533E-06"
+        iyy="0.0005176"
+        iyz="2.7105E-20"
+        izz="0.00054506" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_HIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_HIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_HP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.300000000000001 0.0943129086066267 0.00349999999999956"
+      rpy="0 0 0" />
+    <parent
+      link="FRONT_BODY" />
+    <child
+      link="FL_HIP" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="FL_SHOULDER">
+    <inertial>
+      <origin
+        xyz="-0.0074344 4.8131E-10 -0.0074344"
+        rpy="0 0 0" />
+      <mass
+        value="0.43388" />
+      <inertia
+        ixx="0.00066072"
+        ixy="8.8551E-12"
+        ixz="-0.00032454"
+        iyy="0.00082456"
+        iyz="-1.1716E-11"
+        izz="0.00066072" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_SHOULDER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_SHOULDER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_SR_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0.105687091393375 0"
+      rpy="0 0 0" />
+    <parent
+      link="FL_HIP" />
+    <child
+      link="FL_SHOULDER" />
+    <axis
+      xyz="-0.707106781186547 0 0.707106781186547" />
+  </joint>
+  <link
+    name="FL_THIGH">
+    <inertial>
+      <origin
+        xyz="0.00014733 1.7543E-08 -0.036163"
+        rpy="0 0 0" />
+      <mass
+        value="0.096684" />
+      <inertia
+        ixx="0.00034622"
+        ixy="5.8036E-12"
+        ixz="4.2961E-07"
+        iyy="0.00034967"
+        iyz="-7.4494E-11"
+        izz="2.0661E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_THIGH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_THIGH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_TP_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.106066017177982 0 -0.106066017177982"
+      rpy="0 0 0" />
+    <parent
+      link="FL_SHOULDER" />
+    <child
+      link="FL_THIGH" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="FL_CALF">
+    <inertial>
+      <origin
+        xyz="0.0005734 -4.2817E-07 -0.0010627"
+        rpy="0 0 0" />
+      <mass
+        value="0.057489" />
+      <inertia
+        ixx="8.6256E-05"
+        ixy="3.8875E-10"
+        ixz="7.8041E-05"
+        iyy="0.00016704"
+        iyz="1.4155E-10"
+        izz="8.9999E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_CALF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_CALF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_CALF_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.184500000000001"
+      rpy="0 0 0" />
+    <parent
+      link="FL_THIGH" />
+    <child
+      link="FL_CALF" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="FL_TIP">
+    <inertial>
+      <origin
+        xyz="5.1101E-07 -3.3718E-08 -0.011362"
+        rpy="0 0 0" />
+      <mass
+        value="0.019177" />
+      <inertia
+        ixx="2.4493E-06"
+        ixy="-3.9009E-12"
+        ixz="-1.2404E-11"
+        iyy="2.4492E-06"
+        iyz="3.5007E-12"
+        izz="3.4845E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FL_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_TIP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.104008293469151 0 -0.136008868888504"
+      rpy="0 0 0" />
+    <parent
+      link="FL_CALF" />
+    <child
+      link="FL_TIP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="FR_HIP">
+    <inertial>
+      <origin
+        xyz="1.6966E-13 -0.0049646 -1.3678E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.43122" />
+      <inertia
+        ixx="0.00054506"
+        ixy="5.0385E-15"
+        ixz="-9.9533E-06"
+        iyy="0.0005176"
+        iyz="-4.0237E-15"
+        izz="0.00054506" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_HIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_HIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_HP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.300000000000002 -0.0956870913933748 0.00349999999999989"
+      rpy="0 0 0" />
+    <parent
+      link="FRONT_BODY" />
+    <child
+      link="FR_HIP" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="FR_SHOULDER">
+    <inertial>
+      <origin
+        xyz="-0.0074344 4.8111E-10 -0.0074344"
+        rpy="0 0 0" />
+      <mass
+        value="0.43388" />
+      <inertia
+        ixx="0.00066072"
+        ixy="8.8488E-12"
+        ixz="-0.00032454"
+        iyy="0.00082456"
+        iyz="-1.1724E-11"
+        izz="0.00066072" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_SHOULDER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_SHOULDER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_SR_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 -0.104312908603774 0"
+      rpy="0 0 0" />
+    <parent
+      link="FR_HIP" />
+    <child
+      link="FR_SHOULDER" />
+    <axis
+      xyz="-0.707106781186547 0 0.707106781186548" />
+  </joint>
+  <link
+    name="FR_THIGH">
+    <inertial>
+      <origin
+        xyz="0.00014726 -3.4677E-08 -0.036163"
+        rpy="0 0 0" />
+      <mass
+        value="0.096684" />
+      <inertia
+        ixx="0.00034622"
+        ixy="-2.5324E-12"
+        ixz="4.2968E-07"
+        iyy="0.00034967"
+        iyz="3.9312E-11"
+        izz="2.0661E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_THIGH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_THIGH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_TP_JOINT"
+    type="fixed">
+    <origin
+      xyz="-0.10607 0 -0.10607"
+      rpy="0 0 0" />
+    <parent
+      link="FR_SHOULDER" />
+    <child
+      link="FR_THIGH" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FR_CALF">
+    <inertial>
+      <origin
+        xyz="0.0005734 -3.5632E-07 -0.0010627"
+        rpy="0 0 0" />
+      <mass
+        value="0.057489" />
+      <inertia
+        ixx="8.6256E-05"
+        ixy="3.9112E-10"
+        ixz="7.8041E-05"
+        iyy="0.00016704"
+        iyz="1.3716E-10"
+        izz="8.9999E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_CALF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_CALF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_CP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.1845"
+      rpy="0 0 0" />
+    <parent
+      link="FR_THIGH" />
+    <child
+      link="FR_CALF" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="FR_TIP">
+    <inertial>
+      <origin
+        xyz="6.1742E-07 -1.9313E-07 -0.011362"
+        rpy="0 0 0" />
+      <mass
+        value="0.019177" />
+      <inertia
+        ixx="2.4494E-06"
+        ixy="9.5902E-12"
+        ixz="8.3851E-12"
+        iyy="2.4491E-06"
+        iyz="-1.1433E-11"
+        izz="3.4845E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/FR_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_TIP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.104008293469151 0 -0.136008868888504"
+      rpy="0 0 0" />
+    <parent
+      link="FR_CALF" />
+    <child
+      link="FR_TIP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="HEAD">
+    <inertial>
+      <origin
+        xyz="0.031476 -0.0045112 0.067344"
+        rpy="0 0 0" />
+      <mass
+        value="0.74019" />
+      <inertia
+        ixx="0.0011528"
+        ixy="1.1391E-05"
+        ixz="-0.00015968"
+        iyy="0.0014149"
+        iyz="2.2888E-05"
+        izz="0.0016326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/HEAD.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/HEAD.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HEAD_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.36657 0 0.11678"
+      rpy="0 -3.6595E-05 0" />
+    <parent
+      link="FRONT_BODY" />
+    <child
+      link="HEAD" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RL_HIP">
+    <inertial>
+      <origin
+        xyz="1.6653E-16 0.0056517 -1.1102E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.43122" />
+      <inertia
+        ixx="0.00055368"
+        ixy="-1.584E-18"
+        ixz="4.9766E-06"
+        iyy="0.0005176"
+        iyz="-1.2468E-18"
+        izz="0.00053644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_HIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_HIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_HP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0.095 0"
+      rpy="0 0 0" />
+    <parent
+      link="REAR_BODY" />
+    <child
+      link="RL_HIP" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RL_SHOULDER">
+    <inertial>
+      <origin
+        xyz="0.0027212 -1.0374E-09 -0.010156"
+        rpy="0 0 0" />
+      <mass
+        value="0.43388" />
+      <inertia
+        ixx="0.00094177"
+        ixy="1.7333E-11"
+        ixz="0.00016227"
+        iyy="0.00082456"
+        iyz="-1.1707E-11"
+        izz="0.00037966" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_SHOULDER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_SHOULDER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_SR_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 0.105 0"
+      rpy="0 0 0" />
+    <parent
+      link="RL_HIP" />
+    <child
+      link="RL_SHOULDER" />
+    <axis
+      xyz="-0.96593 0 -0.25882" />
+  </joint>
+  <link
+    name="RL_THIGH">
+    <inertial>
+      <origin
+        xyz="-0.031509 3.6159E-07 -0.032304"
+        rpy="0 0 0" />
+      <mass
+        value="0.10137" />
+      <inertia
+        ixx="0.00027024"
+        ixy="2.4891E-09"
+        ixz="-0.00024367"
+        iyy="0.00051215"
+        iyz="2.2317E-09"
+        izz="0.00025972" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_THIGH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_THIGH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_TP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.038823 0 -0.14489"
+      rpy="0 0 0" />
+    <parent
+      link="RL_SHOULDER" />
+    <child
+      link="RL_THIGH" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RL_CALF">
+    <inertial>
+      <origin
+        xyz="0.0011737 -6.4834E-07 -0.0017107"
+        rpy="0 0 0" />
+      <mass
+        value="0.052193" />
+      <inertia
+        ixx="6.2371E-05"
+        ixy="-1.2413E-11"
+        ixz="5.3995E-05"
+        iyy="0.00011827"
+        iyz="7.8279E-10"
+        izz="6.4434E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_CALF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_CALF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_CP_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.1515 0 -0.15396"
+      rpy="0 0 0" />
+    <parent
+      link="RL_THIGH" />
+    <child
+      link="RL_CALF" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RL_TIP">
+    <inertial>
+      <origin
+        xyz="5.1263E-07 -2.7994E-08 -0.011362"
+        rpy="0 0 0" />
+      <mass
+        value="0.019177" />
+      <inertia
+        ixx="2.4493E-06"
+        ixy="-6.1502E-13"
+        ixz="-1.2216E-11"
+        iyy="2.4492E-06"
+        iyz="4.5089E-12"
+        izz="3.4845E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RL_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_TIP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.095722 0 -0.12772"
+      rpy="0 0 0" />
+    <parent
+      link="RL_CALF" />
+    <child
+      link="RL_TIP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RR_HIP">
+    <inertial>
+      <origin
+        xyz="1.6653E-16 -0.0056517 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.43122" />
+      <inertia
+        ixx="0.00055368"
+        ixy="3.0137E-18"
+        ixz="4.9766E-06"
+        iyy="0.0005176"
+        iyz="-9.0802E-19"
+        izz="0.00053644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_HIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_HIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_HP_JOINT"
+    type="fixed">
+    <origin
+      xyz="0 -0.095 0"
+      rpy="0 0 0" />
+    <parent
+      link="REAR_BODY" />
+    <child
+      link="RR_HIP" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RR_SHOULDER">
+    <inertial>
+      <origin
+        xyz="0.0027212 -1.0374E-09 -0.010156"
+        rpy="0 0 0" />
+      <mass
+        value="0.43388" />
+      <inertia
+        ixx="0.00094177"
+        ixy="1.7333E-11"
+        ixz="0.00016227"
+        iyy="0.00082456"
+        iyz="-1.1707E-11"
+        izz="0.00037966" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_SHOULDER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_SHOULDER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_SR_JOINT"
+    type="continuous">
+    <origin
+      xyz="0 -0.105 0"
+      rpy="0 0 0" />
+    <parent
+      link="RR_HIP" />
+    <child
+      link="RR_SHOULDER" />
+    <axis
+      xyz="-0.96593 0 -0.25882" />
+  </joint>
+  <link
+    name="RR_THIGH">
+    <inertial>
+      <origin
+        xyz="-0.031511 -3.4302E-05 -0.032302"
+        rpy="0 0 0" />
+      <mass
+        value="0.10137" />
+      <inertia
+        ixx="0.00027022"
+        ixy="-1.7359E-07"
+        ixz="-0.00024366"
+        iyy="0.00051216"
+        iyz="-1.4981E-07"
+        izz="0.00025974" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_THIGH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_THIGH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_TP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.038823 0 -0.14489"
+      rpy="0 0 0" />
+    <parent
+      link="RR_SHOULDER" />
+    <child
+      link="RR_THIGH" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RR_CALF">
+    <inertial>
+      <origin
+        xyz="0.0011737 -6.0073E-07 -0.0017107"
+        rpy="0 0 0" />
+      <mass
+        value="0.052193" />
+      <inertia
+        ixx="6.2371E-05"
+        ixy="1.4811E-09"
+        ixz="5.3995E-05"
+        iyy="0.00011827"
+        iyz="-6.8836E-10"
+        izz="6.4434E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_CALF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_CALF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_CP_JOINT"
+    type="continuous">
+    <origin
+      xyz="-0.1515 0 -0.15396"
+      rpy="0 0 0" />
+    <parent
+      link="RR_THIGH" />
+    <child
+      link="RR_CALF" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="RR_TIP">
+    <inertial>
+      <origin
+        xyz="6.5901E-07 -1.588E-07 -0.011362"
+        rpy="0 0 0" />
+      <mass
+        value="0.019177" />
+      <inertia
+        ixx="2.4494E-06"
+        ixy="3.2599E-11"
+        ixz="1.2048E-11"
+        iyy="2.4492E-06"
+        iyz="-7.9939E-12"
+        izz="3.4846E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_TIP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ASSEM_2_2/meshes/RR_TIP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_TIP_JOINT"
+    type="continuous">
+    <origin
+      xyz="0.095722 0 -0.12772"
+      rpy="0 0 0" />
+    <parent
+      link="RR_CALF" />
+    <child
+      link="RR_TIP" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
